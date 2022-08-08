@@ -1,0 +1,74 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  profiles:
+    active: withpass
+
+  #  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: 123
+#    driverClassName: org.h2.Driver
+
+  #  h2:
+  #    console:
+  #      enabled: true
+  #      settings:
+  #        web-allow-others: true
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/neohack
+    username: store in application-withpass.yaml .gitignore
+    password: store in application-withpass.yaml .gitignore
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    enabled: true
+
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: store in application-withpass.yaml .gitignore
+    password: store in application-withpass.yaml .gitignore
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.trust: smtp.mail.ru
+      mail.debug: true
+
+logging:
+  level:
+    com.neohack: debug
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /v2/api-docs
+#    swagger-ui:
+#      base-url: /api
+
+server:
+  servlet:
+    context-path: /api
+
+service:
+  url:
+    smth: https://prj-577.neohack2022.codenrock.com
+
+#server:
+#  port: 443
+#  ssl:
+#    key-alias: spring_ssl
+#    key-store: classpath:spring_ssl.p12
+#    key-store-type: PKCS12
+#    key-password: password
+#    key-store-password: password

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: create-users_roles-table
+      author: KMS
+  - include:
+      file: create-users_roles-table.sql
+      relativeToChangelogFile: true

@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/users/create-users-table.yaml
+  - include:
+      file: db/changelog/changeset/users_roles/create-users_roles-table.yaml
+  - include:
+      file: db/changelog/changeset/teachers/create-teachers-table.yaml
+  - include:
+      file: db/changelog/changeset/students/create-students-table.yaml
+  - include:
+      file: db/changelog/changeset/teachers_students/create-teachers_students-table.yaml
+  - include:
+      file: db/changelog/changeset/courses/create-courses-table.yaml
+  - include:
+      file: db/changelog/changeset/tests/create-tests-table.yaml
+  - include:
+      file: db/changelog/changeset/questions/create-questions-table.yaml
+  - include:
+      file: db/changelog/changeset/answers/create-answers-table.yaml
+  - include:
+      file: db/changelog/changeset/lessons/create-lessons-table.yaml
+  - include:
+      file: db/changelog/changeset/statistics/create-statistics-table.yaml
+  - include:
+      file: db/changelog/changeset/wrong_answers/create-wrong_answers-table.yaml

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: create-questions-table
+      author: KMS
+  - include:
+      file: create-questions-table.sql
+      relativeToChangelogFile: true

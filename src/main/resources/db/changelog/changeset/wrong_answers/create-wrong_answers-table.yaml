@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: create-wrong_answers-table
+      author: KMS
+  - include:
+      file: create-wrong_answers-table.sql
+      relativeToChangelogFile: true

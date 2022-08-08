@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: create-statistics-table
+      author: KMS
+  - include:
+      file: create-statistics-table.sql
+      relativeToChangelogFile: true

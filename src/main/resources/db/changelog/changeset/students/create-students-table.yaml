@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - preConditions:
+      - dbms:
+          type: postgresql
+  - changeSet:
+      id: create-students-table
+      author: KMS
+  - include:
+      file: create-students-table.sql
+      relativeToChangelogFile: true
